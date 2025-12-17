@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Check, ShoppingCart, Truck, Shield, Smartphone } from 'lucide-react';
+import phone from '../assets/phone.jpg'
 
 const AppDownloadSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -110,38 +111,7 @@ const AppDownloadSection = () => {
               {/* Phone frame */}
               <div className="relative bg-gradient-to-br from-gray-800 to-black p-3 rounded-[3rem] shadow-2xl">
                 <div className="bg-white rounded-[2.5rem] overflow-hidden">
-                  {/* Screen content */}
-                  <div className="aspect-[9/19] bg-gradient-to-b from-[#F5F5F5] to-white p-6 flex flex-col">
-                    <div className="text-center mb-6 mt-8">
-                      <Smartphone className="w-16 h-16 mx-auto text-[#FF8C00] mb-4" />
-                      <h3 className="text-2xl font-bold text-black mb-2">THE QUICK POINT</h3>
-                      <p className="text-sm text-gray-600">Fresh Dairy Products</p>
-                    </div>
-                    
-                    <div className="flex-1 flex flex-col justify-center space-y-4">
-                      {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="bg-white rounded-xl p-4 shadow-md border border-gray-100"
-                          style={{ animationDelay: `${i * 0.2}s` }}
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-[#0B8F00] bg-opacity-10 rounded-lg"></div>
-                            <div className="flex-1">
-                              <div className="h-3 bg-gray-200 rounded mb-2"></div>
-                              <div className="h-2 bg-gray-100 rounded w-2/3"></div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-6">
-                      <div className="bg-[#FF8C00] text-white text-center py-3 rounded-xl font-semibold">
-                        Order Now
-                      </div>
-                    </div>
-                  </div>
+                  <img src={phone} alt="App Screenshot" className="w-full h-full object-cover aspect-[9/19]" />
                 </div>
               </div>
             </div>

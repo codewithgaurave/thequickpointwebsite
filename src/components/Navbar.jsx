@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png'
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -97,7 +98,7 @@ const Navbar = () => {
                     : 'bg-green-600 hover:bg-green-700 text-white shadow-lg'
                 }`}
               >
-                <MessageCircle size={18} />
+                <FaWhatsapp size={18} />
                 <span>WhatsApp Us</span>
               </button>
             </div>

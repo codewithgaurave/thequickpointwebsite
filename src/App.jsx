@@ -8,6 +8,8 @@ import HowItWorks from './pages/HowItWorks'
 import WhyChooseUs from './pages/WhyChooseUs'
 import Contact from './pages/Contact'
 import DownloadApp from './pages/DownloadApp'
+import TermsConditions from './pages/TermsConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -17,7 +19,6 @@ const App = () => {
       <ScrollToTop />
         <Navbar />
         <Routes>
-        <Route>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />
@@ -25,8 +26,9 @@ const App = () => {
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/download" element={<DownloadApp />} />
-        </Route>
-    </Routes>
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
     <Footer />
       </div>
   )

@@ -1,24 +1,20 @@
 import React from 'react';
 import { MessageCircle, Instagram, Facebook, Youtube, ChevronRight } from 'lucide-react';
 import logo from '../assets/logo.png'
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hello THE QUICK POINT, I would like to know more about your products and services.");
-    window.open(`https://wa.me/91XXXXXXXXXX?text=${message}`, '_blank');
+    window.open('https://api.whatsapp.com/send/?phone=919934993423&text&type=phone_number&app_absent=0', '_blank');
   };
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Contact', href: '#contact' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '#privacy', available: true },
-    { name: 'Terms & Conditions', href: '#terms', available: true },
-    { name: 'Refund Policy', href: '#refund', available: false }
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Products', href: '/products' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms & Conditions', href: '/terms-conditions' }
   ];
 
   const socialLinks = [
@@ -53,12 +49,6 @@ const Footer = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="relative">
-                {/* <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl" style={{ fontWeight: 700 }}>Q</span>
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-br from-green-600 to-green-700 flex items-center justify-center">
-                  <span className="text-white font-bold text-xs" style={{ fontWeight: 700 }}>P</span>
-                </div> */}
                 <img src={logo} alt="" className='w-8 h-10 md:w-10 md:h-12' />
               </div>
               <span className="font-bold text-lg" style={{ fontWeight: 700 }}>THE QUICK POINT</span>
@@ -76,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2 - Quick Links */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center">
             <h3 className="text-lg font-semibold" style={{ fontWeight: 600 }}>Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -97,10 +87,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3 - Legal */}
-         
-
-          {/* Column 4 - Connect */}
+          {/* Column 3 - Connect */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold" style={{ fontWeight: 600 }}>Connect With Us</h3>
             
@@ -111,7 +98,7 @@ const Footer = () => {
               className="cursor-pointer w-full group px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl font-semibold text-sm shadow-lg hover:shadow-green-600/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
               style={{ fontWeight: 600 }}
             >
-              <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              <FaWhatsapp className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               <span>WhatsApp Us</span>
             </button>
             

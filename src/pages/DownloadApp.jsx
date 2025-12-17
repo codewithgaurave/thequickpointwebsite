@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Download, Smartphone, CheckCircle, ShoppingCart, Package, Truck, Bell, Shield, Heart, Leaf, Award, Zap, Menu, Clock } from 'lucide-react';
-
+import phone from '../assets/phone.jpg'
 const DownloadApp = () => {
   const [isVisible, setIsVisible] = useState({});
 
@@ -148,22 +148,8 @@ const DownloadApp = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative animate-float">
                 <div className="w-64 sm:w-80 h-[500px] sm:h-[600px] bg-gradient-to-br from-orange-500 to-green-600 rounded-[3rem] shadow-2xl p-4 transform rotate-6 hover:rotate-0 transition-transform duration-500">
-                  <div className="w-full h-full bg-white rounded-[2.5rem] flex flex-col items-center justify-center p-6 space-y-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-green-600 rounded-3xl flex items-center justify-center shadow-xl">
-                      <Smartphone className="w-12 h-12 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-center" style={{ fontWeight: 700, color: '#333333' }}>THE QUICK POINT</h3>
-                    <div className="space-y-3 w-full">
-                      <div className="h-3 bg-gray-200 rounded-full w-full"></div>
-                      <div className="h-3 bg-gray-200 rounded-full w-4/5"></div>
-                      <div className="h-3 bg-gray-200 rounded-full w-3/5"></div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3 w-full">
-                      <div className="h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl"></div>
-                      <div className="h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-xl"></div>
-                      <div className="h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-xl"></div>
-                      <div className="h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl"></div>
-                    </div>
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                    <img src={phone} alt="App Screenshot" className="w-full h-full object-cover rounded-[2.5rem]" />
                   </div>
                 </div>
               </div>

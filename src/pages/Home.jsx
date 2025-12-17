@@ -52,7 +52,7 @@ const Home = () => {
       icon: kulhad,
       title: "Kulhad Curd",
       description: "Rustic kulhad-style curd for the perfect desi experience",
-      color: "from-green-600 to-orange-500"
+      // color: "from-green-600 to-orange-500"
     }
   ];
 

@@ -158,7 +158,7 @@ const TermsConditions = () => {
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2" style={{ fontWeight: 500 }}>THE QUICK POINT</p>
-                <p className="text-gray-600" style={{ fontWeight: 400 }}>Email: support@thequickpoint.in</p>
+                <p className="text-gray-600" style={{ fontWeight: 400 }}>Email: thequickpointbarbigha@gmail.com</p>
                 <p className="text-gray-600" style={{ fontWeight: 400 }}>Phone: +91 99349 93423</p>
               </div>
             </div>

@@ -190,10 +190,46 @@ const PrivacyPolicy = () => {
               </p>
             </div>
 
+            {/* Payment Gateway */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-semibold mb-6" style={{ color: '#FF8C00', fontWeight: 600 }}>
+                8. Payment Gateway & Financial Information
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-4" style={{ fontWeight: 400 }}>
+                We use secure third-party payment gateways to process your transactions. Your payment information is handled with the highest level of security.
+              </p>
+              
+              <div className="bg-green-50 rounded-lg p-6 mb-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3" style={{ fontWeight: 600 }}>Payment Security</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700" style={{ fontWeight: 400 }}>All transactions are encrypted using SSL technology</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700" style={{ fontWeight: 400 }}>We do not store your credit card or banking information</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700" style={{ fontWeight: 400 }}>Payment processing is handled by certified payment partners</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700" style={{ fontWeight: 400 }}>Transaction data is protected according to industry standards</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <p className="text-gray-700 leading-relaxed" style={{ fontWeight: 400 }}>
+                For cash on delivery orders, no financial information is collected online. Payment details for digital transactions are processed securely and are not accessible to THE QUICK POINT directly.
+              </p>
+            </div>
+
             {/* Changes to Policy */}
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-6" style={{ color: '#FF8C00', fontWeight: 600 }}>
-                8. Changes to This Policy
+                9. Changes to This Policy
               </h2>
               <p className="text-gray-700 leading-relaxed" style={{ fontWeight: 400 }}>
                 We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.
@@ -203,14 +239,14 @@ const PrivacyPolicy = () => {
             {/* Contact Information */}
             <div className="mb-12">
               <h2 className="text-3xl font-semibold mb-6" style={{ color: '#FF8C00', fontWeight: 600 }}>
-                9. Contact Us
+                10. Contact Us
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4" style={{ fontWeight: 400 }}>
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2" style={{ fontWeight: 500 }}>THE QUICK POINT</p>
-                <p className="text-gray-600" style={{ fontWeight: 400 }}>Email: support@thequickpoint.in</p>
+                <p className="text-gray-600" style={{ fontWeight: 400 }}>Email: thequickpointbarbigha@gmail.com</p>
                 <p className="text-gray-600" style={{ fontWeight: 400 }}>Phone: +91 99349 93423</p>
               </div>
             </div>

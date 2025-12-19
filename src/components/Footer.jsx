@@ -1,189 +1,166 @@
-import React from 'react';
-import { MessageCircle, Instagram, Facebook, Youtube, ChevronRight } from 'lucide-react';
-import logo from '../assets/logo.png'
-import { FaWhatsapp } from 'react-icons/fa';
+import React from "react";
+import {
+  Instagram,
+  Facebook,
+  Youtube,
+  ChevronRight,
+  Download,
+  MessageCircle
+} from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
-  const handleWhatsApp = () => {
-    window.open('https://api.whatsapp.com/send/?phone=919934993423&text&type=phone_number&app_absent=0', '_blank');
-  };
-
   const quickLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Products', href: '/products' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms & Conditions', href: '/terms-conditions' }
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Products", href: "/products" },
+    { name: "Contact", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Conditions", href: "/terms-conditions" }
   ];
 
+  const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/app-release.apk";
+  link.download = "TheQuickPoint-App.apk";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   const socialLinks = [
-    { 
-      name: 'Instagram', 
-      icon: <Instagram className="w-6 h-6" />, 
-      href: 'https://instagram.com',
-      color: 'hover:text-pink-500'
+    {
+      name: "Instagram",
+      icon: <Instagram className="w-6 h-6" />,
+      href: "https://instagram.com",
+      color: "hover:text-pink-500"
     },
-    { 
-      name: 'Facebook', 
-      icon: <Facebook className="w-6 h-6" />, 
-      href: 'https://facebook.com',
-      color: 'hover:text-blue-500'
+    {
+      name: "Facebook",
+      icon: <Facebook className="w-6 h-6" />,
+      href: "https://facebook.com",
+      color: "hover:text-blue-500"
     },
-    { 
-      name: 'YouTube', 
-      icon: <Youtube className="w-6 h-6" />, 
-      href: 'https://youtube.com',
-      color: 'hover:text-red-500'
+    {
+      name: "YouTube",
+      icon: <Youtube className="w-6 h-6" />,
+      href: "https://youtube.com",
+      color: "hover:text-red-500"
     }
   ];
 
   return (
     <footer className="bg-black text-white font-['Poppins',sans-serif]">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
-          
-          {/* Column 1 - Brand */}
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+          {/* Brand */}
           <div className="space-y-6">
-            {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <img src={logo} alt="" className='w-8 h-10 md:w-10 md:h-12' />
-              </div>
-              <span className="font-bold text-lg" style={{ fontWeight: 700 }}>THE QUICK POINT</span>
+              <img src={logo} alt="logo" className="w-10 h-12" />
+              <span className="font-bold text-lg">THE QUICK POINT</span>
             </div>
-            
-            {/* Tagline */}
-            <p className="text-base font-medium" style={{ color: '#FF8C00', fontWeight: 500 }}>
+
+            <p className="text-orange-500 font-medium">
               Freshness, Purity & Authentic Desi Taste
             </p>
-            
-            {/* Description */}
-            <p className="text-sm leading-relaxed" style={{ color: '#BDBDBD', fontWeight: 400 }}>
-              THE QUICK POINT is committed to delivering pure, fresh, and traditionally prepared dairy products. We combine authentic taste with modern convenience to serve quality you can trust.
+
+            <p className="text-sm text-gray-400 leading-relaxed">
+              THE QUICK POINT delivers pure, fresh and traditionally prepared
+              dairy products with modern convenience.
             </p>
           </div>
 
-          {/* Column 2 - Quick Links */}
+          {/* Quick Links */}
           <div className="space-y-6 flex flex-col items-center">
-            <h3 className="text-lg font-semibold" style={{ fontWeight: 600 }}>Quick Links</h3>
+            <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
+              {quickLinks.map((link, i) => (
+                <li key={i}>
                   <a
                     href={link.href}
-                    className="group flex items-center space-x-2 text-sm transition-all duration-300"
-                    style={{ color: '#BDBDBD', fontWeight: 400 }}
+                    className="group flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition"
                   >
-                    <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                    <span className="relative">
-                      {link.name}
-                      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300"></span>
-                    </span>
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span>{link.name}</span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3 - Connect */}
+          {/* Connect */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold" style={{ fontWeight: 600 }}>Connect With Us</h3>
-            
+            <h3 className="text-lg font-semibold">Connect With Us</h3>
+
             {/* WhatsApp Button */}
             <button
-            onClick={() => window.open('https://api.whatsapp.com/send/?phone=919934993423&text&type=phone_number&app_absent=0', '_blank')}
-              
-              className="cursor-pointer w-full group px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl font-semibold text-sm shadow-lg hover:shadow-green-600/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-              style={{ fontWeight: 600 }}
+              onClick={() =>
+                window.open(
+                  "https://api.whatsapp.com/send/?phone=919934993423",
+                  "_blank"
+                )
+              }
+              className="w-full px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition"
             >
-              <FaWhatsapp className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              <MessageCircle className="w-5 h-5" />
               <span>WhatsApp Us</span>
             </button>
-            
-            {/* Social Media Icons */}
-            <div className="space-y-4">
-              <p className="text-sm" style={{ color: '#BDBDBD', fontWeight: 500 }}>Follow Us</p>
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((social, index) => (
+
+            {/* Download App Button */}
+<button
+  onClick={handleDownload}
+  className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition"
+>
+  <Download className="w-5 h-5" />
+  <span>Download App</span>
+</button>
+
+
+            {/* Social Icons */}
+            <div>
+              <p className="text-sm text-gray-400 mb-3">Follow Us</p>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, i) => (
                   <a
-                    key={index}
+                    key={i}
                     href={social.href}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-12 h-12 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 ${social.color}`}
-                    style={{ color: '#BDBDBD' }}
-                    aria-label={social.name}
+                    rel="noreferrer"
+                    className={`w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center transition hover:scale-110 ${social.color}`}
                   >
                     {social.icon}
                   </a>
                 ))}
               </div>
             </div>
-            
-            {/* Newsletter Signup (Optional) */}
-            <div className="pt-4">
-              <p className="text-xs" style={{ color: '#9E9E9E', fontWeight: 400 }}>
-                Stay updated with fresh products and special offers.
-              </p>
-            </div>
+
           </div>
         </div>
       </div>
 
-      {/* Divider Line */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-px" style={{ backgroundColor: '#1E1E1E' }}></div>
+      {/* Divider */}
+      <div className="h-px bg-gray-800 max-w-7xl mx-auto" />
+
+      {/* Bottom */}
+      <div className="py-8 text-center text-xs text-gray-500">
+        © 2025 THE QUICK POINT. Design & Developed by{" "}
+        <a
+          href="https://digicoders.in"
+          target="_blank"
+          rel="noreferrer"
+          className="text-orange-500"
+        >
+          #TeamDigiCoders
+        </a>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          {/* Copyright */}
-          {/* <p className="text-sm text-center md:text-left" style={{ color: '#BDBDBD', fontWeight: 400 }}>
-            © 2025 THE QUICK POINT. Design and Developed By <a href="https://digicoders.in" target='_blank'>#TeamDigiCoders</a>
-          </p> */}
-          
-          {/* Additional Links or Info */}
-          {/* <div className="flex items-center space-x-6">
-            <a 
-              href="#privacy" 
-              className="text-xs hover:text-orange-500 transition-colors"
-              style={{ color: '#9E9E9E', fontWeight: 400 }}
-            >
-              Privacy
-            </a>
-            <a 
-              href="#terms" 
-              className="text-xs hover:text-orange-500 transition-colors"
-              style={{ color: '#9E9E9E', fontWeight: 400 }}
-            >
-              Terms
-            </a>
-            <a 
-              href="#contact" 
-              className="text-xs hover:text-orange-500 transition-colors"
-              style={{ color: '#9E9E9E', fontWeight: 400 }}
-            >
-              Contact
-            </a>
-          </div> */}
-        </div>
-        
-        {/* Made With Love */}
-        <div className="text-center mt-6">
-          <p className="text-xs" style={{ color: '#757575', fontWeight: 400 }}>
-            © 2025 THE QUICK POINT. Design and Developed By <a href="https://digicoders.in" target='_blank'>#TeamDigiCoders</a>
-          </p>
-        </div>
-      </div>
-
-      {/* Scroll to Top Button (Optional) */}
+      {/* Scroll to Top */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 z-40 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 opacity-0 hover:opacity-100 md:opacity-100"
-        aria-label="Scroll to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center hover:scale-110 transition"
       >
         <ChevronRight className="w-6 h-6 -rotate-90" />
       </button>

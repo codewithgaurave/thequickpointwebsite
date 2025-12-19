@@ -56,6 +56,16 @@ const Home = () => {
     }
   ];
 
+  const handleAppDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/app-release.apk";   // file must be in public folder
+  link.download = "TheQuickPoint-App.apk";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   const steps = [
     {
       icon: <Download className="w-16 h-16" />,
